@@ -11,8 +11,16 @@
 ## 安装mock相关包
 
 ``` sh
-$ sudo npm install mockjs -S
-$ sudo npm install json-server -S
+$ npm init 初始化项目
+$ npm i nrm -S --registry=https://registry.npm.taobao.org
+$ npm install -g cnpm --registry=https://registry.npm.taobao.org
+
+$ cnpm install nrm -g 镜像源包
+$ nrm ls 查看镜像源
+$ nrm use taobao
+
+$ npm install mockjs json-server -S
+
 ```
 
 ## 实例-新闻列表
@@ -49,6 +57,6 @@ module.exports = function() {
   return data
 }
 
-$ json-server data.js -p 3003
+$ json-server data.js -p 3000
 $ json-server --port 3004 --host 192.168.1.2 --routes routes.json ./data.js
 ```
